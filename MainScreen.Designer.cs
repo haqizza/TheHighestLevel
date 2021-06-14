@@ -3,12 +3,6 @@ namespace TheHighestLevel
 {
     partial class MainScreen
     {
-        //**************************************
-        // Saya Muhammad Izzatul Haq mengerjakan evaluasi Tugas Masa Depan dalam mata kuliah
-        // Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya
-        // tidak melakukan kecurangan seperti yang telah dispesifikasikan.Aamiin.
-        //**************************************
-
         /// <summary>
         ///  Required designer variable.
         /// </summary>
@@ -41,9 +35,10 @@ namespace TheHighestLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Name = "MainScreen";
             this.Text = "The Highest Score";
+            this.Load += new System.EventHandler(this.MainScreen_Load);
             this.ResumeLayout(false);
 
         }
