@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,11 +37,22 @@ namespace TheHighestLevel.Models
             ExecuteQuery(query);
         }
 
+        public bool Find(string username)
+        {
+            string query = "SELECT * FROM scoreboard WHERE username='" + username + "'";
+
+            if (GetQuery(query))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public void Update(string username, int fail, int success)
         {
             string query = "UPDATE scoreboard SET fail=" + fail
-                            + ", sucess=" + success
-                            + " WHERE name='" + username + "'";
+                            + ", success=" + success
+                            + " WHERE username='" + username + "'";
 
             ExecuteQuery(query);
         }

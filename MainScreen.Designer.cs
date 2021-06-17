@@ -35,7 +35,7 @@ namespace TheHighestLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(804, 501);
             this.Name = "MainScreen";
             this.Text = "The Highest Score";
             this.Load += new System.EventHandler(this.MainScreen_Load);

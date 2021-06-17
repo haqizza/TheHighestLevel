@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -121,7 +122,25 @@ namespace TheHighestLevel.Models
             }
         }
 
-        
+        public bool GetQuery(string query)
+        {
+            MySqlDataReader reader = null;
+            bool exist = false;
+            if (OpenConnection())
+            {
+                var command = new MySqlCommand(query, connection);
+                reader = command.ExecuteReader();
+                exist = reader.HasRows;
+                while (reader.Read())
+                {
+                    Debug.WriteLine(reader["username"]);
+                }
+                CloseConnection();
+            }
+            return exist;
+        }
+
+
 
     }
 }

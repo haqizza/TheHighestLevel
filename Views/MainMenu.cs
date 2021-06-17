@@ -33,7 +33,7 @@ namespace TheHighestLevel.Views
             playerName = tb_username.Text.Length != 0 ?
                 tb_username.Text
                 :
-                scoreTable.CurrentRow.Cells[0].Value.ToString();
+                "guest";
             // set username di presenter
             presenter.playerName = playerName;
             // start game

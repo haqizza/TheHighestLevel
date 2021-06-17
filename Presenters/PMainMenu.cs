@@ -28,6 +28,8 @@ namespace TheHighestLevel.Presenters
 
         public void GameStart()
         {
+            mainScreen.pGamePlay.username = playerName;
+            mainScreen.playerName = playerName;
             mainMenu.Visible = false;
             mainScreen.pGamePlay.GameStart();
         }
